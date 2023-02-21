@@ -29,7 +29,7 @@ export default function Home() {
         <div>
           <div className={styles.main}>
             <h1>FrauDetector</h1>
-            <h3>An open source, free, and secure fraud detection database that uses crowdsourced information to help prevent fraud.</h3>
+            <h3>An open source, free, and secure fraud detection database that uses crowdsourced information to help prevent fraud on billing solutions.</h3>
             <div className={styles.buttons}>
               <a href="/api">Documentation</a>
               <a href="https://github.com/orgs/FrauDetector/repositories" target="_blank">Source</a>
