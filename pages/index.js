@@ -23,7 +23,7 @@ export default function Home() {
             <a href="/removal">Report</a>
             <a href="/removal">Removal</a>
             <a href="/api">Documentation</a>
-            <a href="https://github.com/Fraud-Prevention-Database" target="_blank">Github</a>
+            <a href="https://github.com/FrauDetector" target="_blank">Github</a>
           </navbar>
         </div>
         <div>
@@ -32,7 +32,7 @@ export default function Home() {
             <h3>An open source, free, and secure fraud detection database that uses crowdsourced information to help prevent fraud.</h3>
             <div className={styles.buttons}>
               <a href="/api">Documentation</a>
-              <a href="https://github.com/orgs/Fraud-Prevention-Database/repositories" target="_blank">Source</a>
+              <a href="https://github.com/orgs/FrauDetector/repositories" target="_blank">Source</a>
               <a href="/integrations">Integrations</a>
             </div>
           </div>
