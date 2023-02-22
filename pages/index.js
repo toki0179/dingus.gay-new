@@ -28,7 +28,7 @@ export default function Home() {
         </div>
         <div>
           <div className={styles.main}>
-            <h1>Dingus.gay</h1>
+            <h1>Dingus.gay Nice</h1>
             <h3>This is very dingus.gay yesyes very nice website nice.</h3>
             <div className={styles.buttons}>
               <a href="/api">Documentation</a>
