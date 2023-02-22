@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>FrauDetector</title>
+        <title>Dingus</title>
         <meta name="description" content="FrauDetector is a public fraud database to prevent scammers from using your services" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -18,22 +18,22 @@ export default function Home() {
         <div className={styles.navbarContainer}>
           <navbar className={styles.navbar}>
             <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-            <a href="/removal">Report</a>
-            <a href="/removal">Removal</a>
-            <a href="/api">Documentation</a>
-            <a href="https://github.com/FrauDetector" target="_blank">Github</a>
+            <a href="/about">Nothing</a>
+            <a href="/contact">Nothing</a>
+            <a href="/removal">Nothing</a>
+            <a href="/removal">Nothing</a>
+            <a href="/api">Nothing</a>
+            <a href="https://github.com/toki0179" target="_blank">Github</a>
           </navbar>
         </div>
         <div>
           <div className={styles.main}>
-            <h1>FrauDetector</h1>
-            <h3>An open source, free, and secure fraud detection database that uses crowdsourced information to help prevent fraud on billing solutions.</h3>
+            <h1>Dingus.gay</h1>
+            <h3>This is very dingus.gay yesyes very nice website nice.</h3>
             <div className={styles.buttons}>
               <a href="/api">Documentation</a>
-              <a href="https://github.com/orgs/FrauDetector/repositories" target="_blank">Source</a>
-              <a href="/integrations">Integrations</a>
+              <a href="https://github.com/toki0179" target="_blank">Source</a>
+              <a href="/integrations">Nothing</a>
             </div>
           </div>
         </div>    
