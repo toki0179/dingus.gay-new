@@ -1,3 +1,3 @@
-# FrauDetector
+# Dingus.gay
 
-Free open sourced fraud detection database
+Dingus gay open source
