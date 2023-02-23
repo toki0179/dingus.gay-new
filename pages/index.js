@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Head>
         <title>Dingus</title>
-        <meta name="description" content="FrauDetector is a public fraud database to prevent scammers from using your services" />
+        <meta name="description" content="Play with my dingus please :))))" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
