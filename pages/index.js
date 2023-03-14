@@ -13,16 +13,17 @@ export default function Home() {
         <meta name="description" content="Play with my dingus please :))))" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"></link>
       </Head>
       <main>
         <div className={styles.navbarContainer}>
           <navbar className={styles.navbar}>
             <a href="/">Home</a>
-            <a href="/about">Nothing</a>
-            <a href="/contact">Nothing</a>
-            <a href="/removal">Nothing</a>
-            <a href="/removal">Nothing</a>
-            <a href="/api">Nothing</a>
+            <a href="/shady">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/api">API Soon</a>
             <a href="https://github.com/toki0179" target="_blank">Github</a>
           </navbar>
         </div>
@@ -31,9 +32,8 @@ export default function Home() {
             <h1>Dingus.gay Nice</h1>
             <h3>This is very dingus.gay yesyes very nice website nice.</h3>
             <div className={styles.buttons}>
-              <a href="/api">Documentation</a>
-              <a href="https://github.com/toki0179" target="_blank">Source</a>
-              <a href="/integrations">Nothing</a>
+              <a href="#">Documentation</a>
+              <a href="https://github.com/toki0179/dingus.gay-new" target="_blank">Source</a>
             </div>
           </div>
         </div>    
