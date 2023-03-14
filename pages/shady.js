@@ -3,15 +3,20 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Script from 'next/script'
+import axios from 'axios'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Shady() {
+export default function Shady({
+    track,
+    artist
+})
+{
   return (
     <>
       <Head>
         <title>Shady | Profile</title>
-        <meta name="description" content="Play with my dingus please :))))" />
+        <meta name="description" content="Hey there, I'm a full stack developer!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/profile.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,7 +33,7 @@ export default function Shady() {
                 <h1>Shady</h1>
                 <h3 className={styles.quoteText}>“You can be the ripest, juiciest peach in the world, and there's still going to be somebody who hates peaches.”</h3>
                 <h3 className={styles.quoteAuthor}>― Dita Von Teese</h3>
-
+                <h3 className={styles.quoteText}>Shady's Listening to: <code className={styles.code}>{track.name} by {artist}</code></h3>
             </div>
             <div id="buttons" className={styles.buttons}>
                 <a href="https://discord.gg/freecrack" target="_blank"><img className={styles.icon} src="/discord-mark-blue.svg" />Discord</a>
@@ -41,4 +46,17 @@ export default function Shady() {
       </main>
     </>
   )
+}
+
+export async function getStaticProps() {
+  let res = await axios.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=toki0179&api_key=4c595110de5bc5862d20ec534ea6c73f&format=json')
+  let track = res.data.recenttracks.track[0]
+  let artist = track.artist['#text']
+
+  return {
+      props: {
+          track,
+          artist
+      }
+  }
 }
