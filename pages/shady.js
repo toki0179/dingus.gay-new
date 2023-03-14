@@ -18,7 +18,7 @@ export default function Shady({
         <title>Shady | Profile</title>
         <meta name="description" content="Hey there, I'm a full stack developer!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/profile.ico" />
+        <link rel="icon" href="https://feds.ventryshield.net/?url=https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi2.wp.com%2Furbanlegendsonline.com%2Fwp-content%2Fuploads%2F2019%2F02%2Fthe_shadowy_hat.jpg" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"></link>
