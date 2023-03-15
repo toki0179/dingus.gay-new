@@ -30,7 +30,7 @@ export default function Home() {
         <div>
           <div className={styles.main}>
             <h1>Dingus.gay Nice</h1>
-            <h3>This is very dingus.gay yesyes very nice website nice.</h3>
+            <h3>Dingus.gay will be hosting all of the APIs I create!</h3>
             <div className={styles.buttons}>
               <a href="#"><img className={styles.icon} src="/documentation.svg" />Documentation</a>
               <a href="https://github.com/toki0179/dingus.gay-new" target="_blank"><img className={styles.icon} src="/github-mark-white.svg" />Source</a>
