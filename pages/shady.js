@@ -4,12 +4,14 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Script from 'next/script'
 import axios from 'axios'
+import { searchMusics } from 'node-youtube-music'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Shady({
     track,
-    artist
+    artist,
+    youtubeID
 })
 {
   return (
@@ -22,7 +24,6 @@ export default function Shady({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"></link>
-        inport the javascript to set the width of buttons
         <Script src="/setWidth.js" />
       </Head>
       <main className={styles.profileBackground}>
@@ -42,7 +43,10 @@ export default function Shady({
                 <a href="https://twitter.com/toki0279" target="_blank"><img className={styles.icon} src="/twitterBlue.svg" />Twitter</a>
             </div>
           </div>
-        </div>    
+        </div>
+        <div data-video={youtubeID} data-loop="1" id="youtube-audio" display="none"></div>
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <script src="/yt.js"></script>
       </main>
     </>
   )
@@ -52,11 +56,14 @@ export async function getStaticProps() {
   let res = await axios.get('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=toki0179&api_key=4c595110de5bc5862d20ec534ea6c73f&format=json')
   let track = res.data.recenttracks.track[0]
   let artist = track.artist['#text']
+  let music = await searchMusics(`${track.name} by ${artist}`)
+  let youtubeID = music[0].youtubeId
 
   return {
       props: {
           track,
-          artist
+          artist,
+          youtubeID
       },
 
       revalidate: 10
