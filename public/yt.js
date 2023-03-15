@@ -2,10 +2,6 @@ function onYouTubeIframeAPIReady() {
     var e = document.getElementById("youtube-audio");
     var a = document.createElement("div");
     a.setAttribute("id", "youtube-player"), e.appendChild(a);
-    var o = function (e) {
-        var a = e ? "IDzX9gL.png" : "quyUPXN.png";
-        t.setAttribute("src", "https://i.imgur.com/" + a);
-    };
     e.onclick = function () {
         r.getPlayerState() === YT.PlayerState.PLAYING || r.getPlayerState() === YT.PlayerState.BUFFERING ? (r.pauseVideo(), o(!1)) : (r.playVideo(), o(!0));
     };
