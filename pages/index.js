@@ -32,8 +32,8 @@ export default function Home() {
             <h1>Dingus.gay Nice</h1>
             <h3>This is very dingus.gay yesyes very nice website nice.</h3>
             <div className={styles.buttons}>
-              <a href="#">Documentation</a>
-              <a href="https://github.com/toki0179/dingus.gay-new" target="_blank">Source</a>
+              <a href="#"><img className={styles.icon} src="/documentation.svg" />Documentation</a>
+              <a href="https://github.com/toki0179/dingus.gay-new" target="_blank"><img className={styles.icon} src="/github-mark-white.svg" />Source</a>
             </div>
           </div>
         </div>    
