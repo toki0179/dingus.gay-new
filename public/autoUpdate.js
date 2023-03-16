@@ -1,22 +1,26 @@
-async function update() {
+// async function update() {
 
-    const res = await fetch('/api/music')
-    const data = await res.json()
+//     const res = await fetch('/api/music')
+//     const data = await res.json()
 
-    var check = $('#track-name').text()
-    if (check == `${data.track.name} by ${data.artist}`) return
+//     var check = $('#track-name').text()
+//     if (check == `${data.track.name} by ${data.artist}`) return
 
-    if(data.track.name != 'undefined') {
-        $('#track-name').text(`${data.track.name} by ${data.artist}`)
-    }
+//     if (check == 'Loading...') {
+//         $('#track-name').text(`${data.track.name} by ${data.artist}`)
+//         return
+//     }
 
-    if (check == 'Loading...') return
+//     // wait for audio to load
+//     setTimeout(() => {
 
-    // wait for audio to load
-    setTimeout(() => {
-        document.getElementById('audio').contentWindow.location.reload(true);
-    }, 1000)
-}
+//         if(data.track.name != 'undefined') {
+//             $('#track-name').text(`${data.track.name} by ${data.artist}`)
+//         }
+        
+//         document.getElementById('audio').contentWindow.location.reload(true);
+//     }, 5000)
+// }
 
-update()
-setInterval(update, 10000)
+// update()
+// setInterval(update, 10000)
