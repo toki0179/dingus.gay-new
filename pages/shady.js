@@ -25,6 +25,7 @@ export default function Shady({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"></link>
         <Script src="/setWidth.js" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       </Head>
       <main className={styles.profileBackground}>
         <div>
@@ -34,7 +35,7 @@ export default function Shady({
                 <h1>Shady</h1>
                 <h3 className={styles.quoteText}>“You can be the ripest, juiciest peach in the world, and there's still going to be somebody who hates peaches.”</h3>
                 <h3 className={styles.quoteAuthor}>― Dita Von Teese</h3>
-                <h3 className={styles.quoteText}>Shady's Listening to: <code className={styles.code}>{track.name} by {artist}</code></h3>
+                <h3 className={styles.quoteText}>Shady's Listening to: <code id="track-name" className={styles.code}>Loading...</code></h3>
             </div>
             <div id="buttons" className={styles.buttons}>
                 <a href="https://discord.gg/freecrack" target="_blank"><img className={styles.icon} src="/discord-mark-blue.svg" />Discord</a>
@@ -44,9 +45,8 @@ export default function Shady({
             </div>
           </div>
         </div>
-        <div data-video={youtubeID} data-loop="1" id="youtube-audio" display="none"></div>
-        <script src="https://www.youtube.com/iframe_api"></script>
-        <script src="/yt.js"></script>
+        <iframe id="audio" src='http://localhost:3000/audio.mp3' width="0" height="0" frameBorder="0" allow="autoplay" allowFullScreen></iframe>
+        <script src="/autoUpdate.js"></script>
       </main>
     </>
   )
