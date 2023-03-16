@@ -57,11 +57,11 @@ export default function Shady({
 
 export async function getStaticProps() {
   let res = await axios.get(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=toki0179&api_key=${config.apiKey}&format=json`)
-  let track = res.data.recenttracks.track[0]
-  let artist = track.artist['#text']
-  let music = await searchMusics(`${track.name} by ${artist}`)
-  let youtubeID = music[0].youtubeId
-  let youtubeLink = `https://music.youtube.com/watch?v=${youtubeID}`
+  let track = res.data.recenttracks.track[0] || "Something went wrong"
+  let artist = track.artist['#text'] || "Something went wrong"
+  let music = await searchMusics(`${track.name} by ${artist}`) || "Something went wrong"
+  let youtubeID = music[0].youtubeId || "Something went wrong"
+  let youtubeLink = `https://music.youtube.com/watch?v=${youtubeID}` || "Something went wrong"
 
   return {
       props: {
