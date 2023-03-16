@@ -146,6 +146,16 @@
   border-radius: .2rem;
 }
 
+.linkButton {
+  text-decoration: underline;
+  color: rgb(19, 113, 255);
+  transition: 500ms
+}
+
+.linkButton:hover {
+  color:rgb(0, 83, 161);
+}
+
 /* Media query for mobile devices */
 @media only screen and (max-width: 670px) {
   .navbarContainer {

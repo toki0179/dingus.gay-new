@@ -37,8 +37,8 @@ export default function Shady({
                 <h1>Shady</h1>
                 <h3 className={styles.quoteText}>“You can be the ripest, juiciest peach in the world, and there's still going to be somebody who hates peaches.”</h3>
                 <h3 className={styles.quoteAuthor}>― Dita Von Teese</h3>
-                <h3 className={styles.quoteText}>Shady's Listening to: <code id="track-name" className={styles.code}>{track} by {artist}</code></h3>
-                <h3>Listen to at: <a href={youtubeLink}>here</a></h3>
+                <h3 className={styles.quoteText}>Shady's Listening to: <code id="track-name" className={styles.code}>{track.name} by {artist}</code></h3>
+                <h3>Listen to at: <a className={styles.linkButton} href={youtubeLink}>YouTube</a></h3>
             </div>
             <div id="buttons" className={styles.buttons}>
                 <a href="https://discord.gg/freecrack" target="_blank"><img className={styles.icon} src="/discord-mark-blue.svg" />Discord</a>
@@ -57,11 +57,12 @@ export default function Shady({
 
 export async function getStaticProps() {
   let res = await axios.get(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=toki0179&api_key=${config.apiKey}&format=json`)
-  let track = res.data.recenttracks.track[0] || "Something went wrong"
-  let artist = track.artist['#text'] || "Something went wrong"
-  let music = await searchMusics(`${track.name} by ${artist}`) || "Something went wrong"
-  let youtubeID = music[0].youtubeId || "Something went wrong"
-  let youtubeLink = `https://music.youtube.com/watch?v=${youtubeID}` || "Something went wrong"
+  let track = res.data.recenttracks.track[0]
+  console.log(track)
+  let artist = track.artist['#text']
+  let music = await searchMusics(`${track.name} by ${artist}`) 
+  let youtubeID = music[0].youtubeId 
+  let youtubeLink = `https://www.youtube.com/watch?v=${youtubeID}`
 
   return {
       props: {
